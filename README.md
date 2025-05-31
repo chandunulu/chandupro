@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chandu Nulu - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * {
       box-sizing: border-box;
@@ -17,6 +18,7 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #f0f2f5, #d1e4f5);
       color: #333;
+      line-height: 1.6;
     }
 
     header {
@@ -29,6 +31,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      flex-wrap: wrap;
     }
 
     header h1 {
@@ -59,7 +62,6 @@
       margin-bottom: 20px;
     }
 
-    /* About section image */
     #ab img {
       width: 150px;
       height: 150px;
@@ -84,10 +86,9 @@
       text-align: center;
     }
 
-
-    #pr .projects-container {
+    .projects-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
@@ -96,7 +97,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s;
-      color: #333;
+      background-color: white;
     }
 
     .project-box:hover {
@@ -111,20 +112,10 @@
       margin-bottom: 10px;
     }
 
-    
-    .project1 {
-      background: #fff3e0;
-    }
+    .project1 { background: #fff3e0; }
+    .project2 { background: #e8f5e9; }
+    .project3 { background: #ede7f6; }
 
-    .project2 {
-      background: #e8f5e9; 
-    }
-
-    .project3 {
-      background: #ede7f6; 
-    }
-
-   
     #sk ul li {
       background-color: #e3f2fd;
       padding: 10px 15px;
@@ -156,17 +147,46 @@
       margin-top: 40px;
     }
 
+    /* Responsive Styles */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
         align-items: flex-start;
       }
+
       nav {
         margin-top: 10px;
       }
+
       nav a {
         display: inline-block;
         margin: 10px 10px 0 0;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+
+      #ab img {
+        width: 120px;
+        height: 120px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      table {
+        overflow-x: auto;
+        display: block;
+      }
+
+      th, td {
+        font-size: 14px;
+      }
+
+      .project-box img {
+        height: 120px;
       }
     }
   </style>
